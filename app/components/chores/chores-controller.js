@@ -43,14 +43,16 @@ app.controller('choresController', function ($scope) {
         $scope.Chores.push($scope.newChore);
         $scope.newChore = "";
         
-        // $scope.Chores.push({
-        //     task: $scope.newChore.task,
-        //     dueDate: $scope.newChore.dueDate,
-        //     responsibleParty: $scope.newChore.responsibleParty,
-        //     estTime: $scope.newChore.estTime
-        }
+        $scope.Chores.push({
+            task: $scope.newChore.task,
+            dueDate: $scope.newChore.dueDate,
+            responsibleParty: $scope.newChore.responsibleParty,
+            estTime: $scope.newChore.estTime
+        
+        }),
         
      $scope.deleteChore = function(i){
          $scope.Chores.splice(i,1);
      }
-    })
+    }
+     });
